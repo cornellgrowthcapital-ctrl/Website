@@ -138,7 +138,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 }
 
 /* ---------- People ---------- */
-.people { display: grid; grid-template-columns: repeat(3, 200px); justify-content: center; gap: 44px 64px; margin: 0; padding: 0; list-style: none; text-align: center; }
+.people { display: flex; flex-wrap: wrap; justify-content: center; gap: 44px 64px; max-width: 728px; margin: 0 auto; padding: 0; list-style: none; text-align: center; }
+.people li { width: 200px; }
 .people img { width: 200px; height: 200px; object-fit: cover; }
 .people h3 { margin: 14px 0 2px; font-size: 18px; }
 .people p { margin: 0; font-size: 14px; line-height: 1.35; }
@@ -214,7 +215,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .slide-text { left: 16px; right: 16px; }
   .slides-progress { left: 16px; }
 
-  .people { grid-template-columns: repeat(2, minmax(0, 160px)); gap: 32px 20px; }
+  .people { gap: 32px 20px; }
+  .people li { width: calc(50% - 10px); max-width: 160px; }
   .people img { width: 100%; height: auto; aspect-ratio: 1; }
   .analysts { grid-template-columns: repeat(2, 1fr); }
   .logo-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
