@@ -144,7 +144,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .people h3 { margin: 14px 0 2px; font-size: 18px; }
 .people p { margin: 0; font-size: 14px; line-height: 1.35; }
 
-.members { columns: 4 160px; column-gap: 32px; max-width: 860px; margin: 0 auto; padding: 0; list-style: none; text-align: center; font-size: 17px; line-height: 1.9; }
+.people-sm { max-width: 784px; gap: 36px 48px; }
+.people-sm li { width: 160px; }
+.people-sm img { width: 160px; height: 160px; }
 
 /* ---------- Recruitment ---------- */
 .pathways { max-width: 860px; margin: 0 auto; }
