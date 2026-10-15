@@ -141,7 +141,46 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .people { display: flex; flex-wrap: wrap; justify-content: center; gap: 44px 64px; max-width: 728px; margin: 0 auto; padding: 0; list-style: none; text-align: center; }
 .people li { width: 200px; }
 .people img { width: 200px; height: 200px; object-fit: cover; }
-.people h3 { margin: 14px 0 2px; font-size: 18px; }
+.people h3 { margin: 0 0 2px; font-size: 18px; }
+
+/* Hover card: the info panel turns maroon and slides up over the photo */
+.card-info { position: relative; padding: 12px 8px 10px; background: #fff; transition: background .3s, color .3s; }
+.card-more {
+  position: absolute; left: 0; right: 0; bottom: 100%;
+  max-height: 0; overflow: hidden;
+  background: var(--brand); transition: max-height .35s ease;
+}
+.people li:hover .card-info, .people li:focus-within .card-info { background: var(--brand); color: var(--cream); }
+.people li:hover .card-more, .people li:focus-within .card-more { max-height: 140px; }
+.people .card-meta { margin: 14px 8px 0; color: var(--cream); }
+.read-more {
+  margin: 12px 0 8px; padding: 2px 4px;
+  background: none; border: 0; cursor: pointer;
+  color: var(--cream); font: italic 15px var(--serif); letter-spacing: .02em;
+}
+.read-more span { display: inline-block; transition: transform .2s; }
+.read-more:hover span { transform: translateX(4px); }
+@media (hover: none) {
+  .card-info { display: flex; flex-direction: column; }
+  .card-more { position: static; order: 3; max-height: none; background: none; }
+  .people li:hover .card-info { background: #fff; color: inherit; }
+  .read-more { margin: 4px 0 0; color: var(--brand); }
+}
+
+/* Read More bio pop-up */
+.bio-dialog {
+  width: calc(100% - 32px); max-width: 560px; padding: 0; border: 0;
+  background: #fff; color: var(--ink); font-family: var(--serif); text-align: center;
+}
+.bio-dialog::backdrop { background: rgba(20, 3, 8, .65); }
+.bio-body { padding: 48px 40px 40px; }
+.bio-dialog img { width: 200px; height: 200px; margin: 0 auto 22px; border-radius: 50%; object-fit: cover; }
+.bio-dialog h2 { margin: 0; font-size: 28px; }
+.bio-role { margin: 4px 0 0; color: var(--brand); font-size: 17px; }
+.bio-meta { margin: 2px 0 0; color: #555; font-size: 15px; }
+.bio-role:empty, .bio-meta:empty { display: none; }
+.bio-text { margin: 22px 0 30px; font-size: 17px; line-height: 1.6; }
+.bio-dialog .btn { margin: 0 auto; width: 260px; border: 0; cursor: pointer; font-family: var(--serif); font-size: 16px; }
 .people p { margin: 0; font-size: 14px; line-height: 1.35; }
 
 .people-sm { max-width: 784px; gap: 36px 48px; }
