@@ -204,13 +204,21 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .schedule tr:nth-child(even) { background: var(--stripe); }
 .note { max-width: 640px; margin: 28px auto 0; font-size: 14px; font-style: italic; color: #444; }
 
-/* ---------- Alumni ---------- */
-.logo-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; margin: 0 0 80px; padding: 0; list-style: none; }
-.logo-grid li {
-  aspect-ratio: 5 / 3; display: grid; place-items: center;
-  border: 1px dashed #cfcac3; background: #faf9f7;
-  color: #a9a39a; font-size: 12px; letter-spacing: .15em; text-transform: uppercase;
-}
+/* ---------- About: stats + placements ---------- */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 1040px; margin: 0 auto; padding: 72px 24px 0; text-align: center; }
+.stats > div { padding: 4px 24px; border-left: 1px solid var(--line); }
+.stats > div:first-child { border-left: 0; }
+.stat-num { display: block; color: var(--brand); font-size: clamp(42px, 5vw, 60px); line-height: 1.1; }
+.stat-label { display: block; margin-top: 8px; color: #555; font-size: 16px; }
+
+.placements { padding: 88px 24px 96px; background: #f7f1e8; }
+.placements-intro { margin: -28px 0 48px; text-align: center; font-style: italic; color: #555; }
+.placement-years { max-width: 1000px; margin: 0 auto; }
+.placement-years > div + div { margin-top: 48px; }
+.placement-years h3 { margin: 0 auto 20px; padding-bottom: 14px; max-width: 360px; border-bottom: 1px solid #e2d4c0; text-align: center; color: var(--brand); font-size: 24px; }
+.placement-years ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 24px; margin: 0; padding: 0; list-style: none; text-align: center; }
+.placement-years li { width: 300px; padding: 10px 0; font-size: 17px; line-height: 1.35; }
+.placement-years li span { display: block; color: #666; font-size: 15px; }
 
 /* ---------- Footer ---------- */
 .footer { background: var(--brand); color: var(--cream); padding: 56px 64px 40px; }
@@ -257,7 +265,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .people { gap: 32px 20px; }
   .people li { width: calc(50% - 10px); max-width: 160px; }
   .people img { width: 100%; height: auto; aspect-ratio: 1; }
-  .logo-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .stats { grid-template-columns: 1fr; padding-top: 48px; }
+  .stats > div { padding: 18px 0; border-left: 0; border-top: 1px solid var(--line); }
+  .stats > div:first-child { border-top: 0; }
+  .placements { padding: 64px 16px 72px; }
 
   .footer { padding: 44px 16px 32px; }
   .footer-top { flex-direction: column; }
