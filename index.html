@@ -6,7 +6,7 @@
   <title>Cornell Growth Capital</title>
   <meta name="description" content="Cornell Growth Capital is a student-run investment organization at Cornell University.">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261026145619">
+  <link rel="stylesheet" href="styles.css?v=20261026150645">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -32,70 +32,33 @@
       </div>
     </section>
 
-    <section class="intro">
+    <section class="intro" id="about">
       <p class="mission">We train students to think like investors: developing rigorous theses, defending ideas under pressure, and making disciplined decisions through a structured investment process.</p>
-    </section>
-
-    <section class="about" id="about">
-      <figure class="about-photo">
-        <img src="images/about-mcgraw.jpg" alt="McGraw Tower and Uris Library on Cornell's campus" loading="lazy">
-        <figcaption><a href="https://commons.wikimedia.org/wiki/File:Cornell_University_-_Uris_Library,_McGraw_Tower_and_Olin_Library.jpg">Photo: P. Hughes, CC BY 4.0</a></figcaption>
-      </figure>
-      <div class="about-copy">
-        <h2>About Us</h2>
-        <p>Cornell Growth Capital is a student-run investment organization at Cornell University. Founded in 2026, the club brings together students from every school and major who want to understand how markets work. Our purpose is two-fold: to develop disciplined, research-driven investors, and to build a community of students who share a passion for investing.</p>
-        <div class="stats">
-          <div><span class="stat-num">2026</span><span class="stat-label">Founded at Cornell University</span></div>
-          <div><span class="stat-num">39</span><span class="stat-label">Members across three class years</span></div>
-          <div><span class="stat-num">6</span><span class="stat-label">Industry groups, from TMT to distressed debt</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="what-we-do">
-      <h2 class="section-title">What We Do</h2>
-      <div class="accordion">
-        <details>
-          <summary>Investor Training Program</summary>
-          <div class="panel">
-            <p>Our introductory course covers accounting, valuation, and financial markets from the ground up. No prior experience is required. See the <a href="recruitment.html">Recruitment</a> page for more information.</p>
-          </div>
-        </details>
-        <details>
-          <summary>General Body Meetings</summary>
-          <div class="panel">
-            <p>Regular meetings feature member stock pitches, discussions of what is moving markets, and guest speakers from across the industry. All members are welcome.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Investment Process</summary>
-          <div class="panel">
-            <p>Our investment process is designed to promote rigorous research, collaborative debate, and disciplined decision-making.</p>
-            <p><strong>Idea generation:</strong> Analysts identify potential opportunities and share early findings with the Investment Committee for feedback and refinement.</p>
-            <p><strong>Full pitch:</strong> The team completes deep fundamental research and pitches the idea at a general body meeting. After discussion and questioning, the Investment Committee votes on whether to add the position to the portfolio.</p>
-            <p><strong>Portfolio tracking:</strong> Approved ideas are monitored for performance, thesis validation, and risk. Analysts provide updates and recommend changes as new information emerges.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Analyst Program</summary>
-          <div class="panel">
-            <p>The Analyst Program builds on the Investor Training Program and gives analysts deeper technical skills and hands-on investing experience.</p>
-            <p><strong>Lesson 1:</strong> Investment Philosophy &middot; <strong>Lesson 2:</strong> Accounting &amp; Modeling &middot; <strong>Lesson 3:</strong> Business Quality &middot; <strong>Lesson 4:</strong> Valuation &middot; <strong>Lesson 5:</strong> How to Pitch &middot; <strong>Lesson 6:</strong> Recruiting</p>
-            <p>Throughout the program, each analyst researches a company with a mentor, writes a full investment memo, and builds a three-statement model.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Recruiting Prep</summary>
-          <div class="panel">
-            <p>We help members prepare for internship and full-time recruiting in investment banking, private equity, hedge funds, and asset management through technical interview practice, resume reviews, and conversations with students who have been through the process.</p>
-          </div>
-        </details>
-      </div>
+      <h2>About Us</h2>
+      <p>Cornell Growth Capital is a student-run investment organization at Cornell University. Founded in 2026, the club brings together students from every school and major who want to understand how markets work. Our purpose is two-fold: to develop disciplined, research-driven investors, and to build a community of students who share a passion for investing.</p>
     </section>
 
     <section class="placements" id="placements">
       <h2 class="section-title">Placements</h2>
       <p class="placements-intro">Where our members have worked, interned, and are headed next.</p>
+      <!-- Logo spots: replace a firm name with <img src="images/firms/name.png" alt="Firm name"> -->
+      <ul class="logo-wall">
+        <li>AperioHub</li>
+        <li>Artemis Real Estate Partners</li>
+        <li>B. F. Saul Company</li>
+        <li>Cit&eacute; Gestion</li>
+        <li>Fire Clay Partners</li>
+        <li>Foreshore Partners</li>
+        <li>Harvey Partners</li>
+        <li>Kelley Drye</li>
+        <li>Morgan Stanley</li>
+        <li>Premier Athlete Agency</li>
+        <li>Quality Branded Restaurants</li>
+        <li>Rand Whitney</li>
+        <li>Sentinel Solutions</li>
+        <li>SkaFld Studio</li>
+        <li>TD Securities</li>
+      </ul>
       <!-- Built from member bios (Oct 2026). One <li> per placement: <b>Firm</b><span>Role</span> -->
       <div class="placement-years">
         <div>
@@ -125,31 +88,6 @@
         </div>
       </div>
     </section>
-
-    <section class="slides" style="--count:2" aria-label="What we do">
-      <div class="slides-sticky">
-        <div class="slides-progress" aria-hidden="true"><span class="is-active">01</span><i><b></b></i><span>02</span></div>
-        <article class="slide is-active">
-          <!-- Photo: Teemu Paananen / Unsplash -->
-          <div class="slide-media"><img src="images/pitches.jpg" alt="A presenter on stage in front of a large screen and a packed audience" loading="lazy"></div>
-          <div class="slide-text">
-            <p class="slide-kicker">What We Do</p>
-            <h2>Stock Pitches</h2>
-            <p>Members research companies and pitch them to the club. Every idea has to survive tough questions from the room before it earns a vote.</p>
-          </div>
-        </article>
-        <article class="slide">
-          <!-- Photo: Kevin Gonzalez / Unsplash -->
-          <div class="slide-media"><img src="images/speakers.jpg" alt="An audience watching a speaker on stage" loading="lazy"></div>
-          <div class="slide-text">
-            <p class="slide-kicker">What We Do</p>
-            <h2>Industry Speakers</h2>
-            <p>We host investors and finance professionals to share how they think, how they got started, and what they look for in the next generation of talent.</p>
-          </div>
-        </article>
-        <span class="scroll-cue" aria-hidden="true">Scroll</span>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
@@ -169,6 +107,6 @@
     <div class="footer-bottom"><span>est. 2026</span><span>&copy; 2026 Cornell Growth Capital</span></div>
   </footer>
 
-  <script src="main.js?v=20261026145619"></script>
+  <script src="main.js?v=20261026150645"></script>
 </body>
 </html>
