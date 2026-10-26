@@ -69,16 +69,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .photo-credit { position: absolute; z-index: 1; right: 12px; bottom: 8px; font-size: 11px; color: rgba(255,255,255,.6); text-decoration: none; }
 .photo-credit:hover { color: #fff; }
 
-/* Stand-in until real photos arrive */
-.photo-placeholder {
-  position: absolute; inset: 0;
-  display: grid; place-items: center;
-  background: repeating-linear-gradient(135deg, #2a2a2a 0 22px, #303030 22px 44px);
-  color: rgba(255,255,255,.45);
-  font-size: 14px; letter-spacing: .2em; text-transform: uppercase;
-}
-.photo-placeholder span { transform: translateY(-80px); }
-
 /* ---------- Home intro ---------- */
 .intro { max-width: 960px; margin: 96px auto 72px; padding: 0 24px; }
 .intro .mission {
@@ -88,6 +78,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 }
 .intro h2 { margin: 56px 0 10px; font-size: 32px; }
 .intro p:not(.mission) { margin: 0; font-size: 20px; }
+
+/* Industry group tags under About Us */
+.group-label { margin: 32px 0 12px; font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: #777; }
+.group-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.group-tags li { padding: 6px 14px; border: 1px solid var(--brand); color: var(--brand); font-size: 16px; }
+
+/* Page heading for pages without a photo banner */
+.page-head { max-width: 860px; margin: 0 auto; padding: 88px 24px 8px; text-align: center; }
+.page-head h1 { margin: 0 0 16px; font-size: clamp(36px, 4vw, 48px); }
+.page-head p { margin: 0; color: #444; font-size: 19px; }
 
 /* ---------- Generic sections ---------- */
 .section { max-width: 1040px; margin: 0 auto; padding: 72px 24px; }
@@ -122,6 +122,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .people li:hover .card-info { background: #fff; color: inherit; }
   .read-more { margin: 4px 0 0; color: var(--brand); }
 }
+
+/* Industry groups: one column per group, names listed under each */
+.groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 32px; max-width: 900px; margin: 0 auto; text-align: center; }
+.groups h3 { margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid var(--line); font-size: 20px; line-height: 1.25; }
+.groups ul { margin: 0; padding: 0; list-style: none; font-size: 16px; line-height: 1.8; }
+.groups .tbd { color: #999; font-style: italic; }
 
 /* Read More bio pop-up */
 .bio-dialog {
@@ -213,6 +219,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .logo-wall li { height: 64px; }
   .logo-wall img { max-height: 52px; }
 
+  .page-head { padding: 56px 16px 0; }
+  .groups { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; }
   .footer { padding: 44px 16px 32px; }
   .footer-top { flex-direction: column; }
   .footer-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
