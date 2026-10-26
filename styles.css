@@ -84,11 +84,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .group-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .group-tags li { padding: 6px 14px; border: 1px solid var(--brand); color: var(--brand); font-size: 16px; }
 
-/* Page heading for pages without a photo banner */
-.page-head { max-width: 860px; margin: 0 auto; padding: 88px 24px 8px; text-align: center; }
-.page-head h1 { margin: 0 0 16px; font-size: clamp(36px, 4vw, 48px); }
-.page-head p { margin: 0; color: #444; font-size: 19px; }
-
 /* ---------- Generic sections ---------- */
 .section { max-width: 1040px; margin: 0 auto; padding: 72px 24px; }
 .section-title { margin: 0 0 44px; text-align: center; font-size: clamp(28px, 3vw, 38px); color: #2a2a2a; }
@@ -220,7 +215,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .logo-wall li { height: 64px; }
   .logo-wall img { max-height: 52px; }
 
-  .page-head { padding: 56px 16px 0; }
   .groups { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; }
   .footer { padding: 44px 16px 32px; }
   .footer-top { grid-template-columns: 1fr; gap: 28px; }
