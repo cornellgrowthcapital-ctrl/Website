@@ -162,9 +162,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 
 /* ---------- Home: placements + firm logo spots ---------- */
 #about, #placements { scroll-margin-top: calc(var(--nav-h) + 24px); }
-.logo-wall { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1000px; margin: 0 auto; padding: 0; list-style: none; }
-.logo-wall li { display: grid; place-items: center; width: 220px; height: 120px; padding: 24px; background: #fff; border: 1px solid #eadfce; }
-.logo-wall img { max-width: 100%; max-height: 64px; object-fit: contain; }
+.logo-wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 56px; align-items: center; max-width: 1040px; margin: 0 auto; padding: 0; list-style: none; }
+.logo-wall li { display: flex; align-items: center; justify-content: center; height: 96px; }
+.logo-wall img { max-width: 100%; max-height: 72px; object-fit: contain; }
 .placements { padding: 88px 24px 96px; background: #f7f1e8; }
 .placements-intro { margin: -28px 0 48px; text-align: center; font-style: italic; color: #555; }
 
@@ -209,8 +209,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .people li { width: calc(50% - 10px); max-width: 160px; }
   .people img { width: 100%; height: auto; aspect-ratio: 1; }
   .placements { padding: 64px 16px 72px; }
-  .logo-wall { gap: 12px; }
-  .logo-wall li { width: calc(50% - 6px); height: 96px; padding: 16px; }
+  .logo-wall { grid-template-columns: repeat(2, 1fr); gap: 28px 24px; }
+  .logo-wall li { height: 64px; }
+  .logo-wall img { max-height: 52px; }
 
   .footer { padding: 44px 16px 32px; }
   .footer-top { flex-direction: column; }
