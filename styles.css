@@ -162,21 +162,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 
 /* ---------- Home: placements + firm logo spots ---------- */
 #about, #placements { scroll-margin-top: calc(var(--nav-h) + 24px); }
-.logo-wall { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; max-width: 1000px; margin: 0 auto 64px; padding: 0; list-style: none; }
-.logo-wall li {
-  display: grid; place-items: center; aspect-ratio: 5 / 3; padding: 12px;
-  border: 1px dashed #d6c6ae; background: #fffdf9;
-  color: #9a8f80; font-size: 14px; line-height: 1.3; text-align: center;
-}
-.logo-wall img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.logo-wall { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1000px; margin: 0 auto; padding: 0; list-style: none; }
+.logo-wall li { display: grid; place-items: center; width: 220px; height: 120px; padding: 24px; background: #fff; border: 1px solid #eadfce; }
+.logo-wall img { max-width: 100%; max-height: 64px; object-fit: contain; }
 .placements { padding: 88px 24px 96px; background: #f7f1e8; }
 .placements-intro { margin: -28px 0 48px; text-align: center; font-style: italic; color: #555; }
-.placement-years { max-width: 1000px; margin: 0 auto; }
-.placement-years > div + div { margin-top: 48px; }
-.placement-years h3 { margin: 0 auto 20px; padding-bottom: 14px; max-width: 360px; border-bottom: 1px solid #e2d4c0; text-align: center; color: var(--brand); font-size: 24px; }
-.placement-years ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 24px; margin: 0; padding: 0; list-style: none; text-align: center; }
-.placement-years li { width: 300px; padding: 10px 0; font-size: 17px; line-height: 1.35; }
-.placement-years li span { display: block; color: #666; font-size: 15px; }
 
 /* ---------- Footer ---------- */
 .footer { background: var(--brand); color: var(--cream); padding: 56px 64px 40px; }
@@ -219,7 +209,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .people li { width: calc(50% - 10px); max-width: 160px; }
   .people img { width: 100%; height: auto; aspect-ratio: 1; }
   .placements { padding: 64px 16px 72px; }
-  .logo-wall { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .logo-wall { gap: 12px; }
+  .logo-wall li { width: calc(50% - 6px); height: 96px; padding: 16px; }
 
   .footer { padding: 44px 16px 32px; }
   .footer-top { flex-direction: column; }
