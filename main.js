@@ -33,3 +33,18 @@ if (bio) {
     }
   });
 }
+
+// Home page: glide to sections and show /about or / in the address bar instead of #about / #top
+const cleanPath = { '#top': './', '#about': 'about' };
+const glide = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="#"]');
+  const hash = link && link.getAttribute('href');
+  if (!(hash in cleanPath)) return;
+  e.preventDefault();
+  if (hash === '#top') scrollTo({ top: 0, behavior: glide });
+  else document.querySelector(hash).scrollIntoView({ behavior: glide });
+  history.replaceState(null, '', cleanPath[hash]);
+});
+// Arriving from another page (or from /about) lands on /#about; tidy the address
+if (location.hash === '#about') history.replaceState(null, '', 'about');
