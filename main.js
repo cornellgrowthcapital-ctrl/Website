@@ -46,5 +46,10 @@ document.addEventListener('click', (e) => {
   else document.querySelector(hash).scrollIntoView({ behavior: glide });
   history.replaceState(null, '', cleanPath[hash]);
 });
-// Arriving from another page (or from /about) lands on /#about; tidy the address
-if (location.hash === '#about') history.replaceState(null, '', 'about');
+// Arriving from another page (or from /about) lands on /#about: once loaded, sit on About and tidy the address
+if (location.hash === '#about') {
+  addEventListener('load', () => {
+    document.getElementById('about').scrollIntoView();
+    history.replaceState(null, '', 'about');
+  });
+}
