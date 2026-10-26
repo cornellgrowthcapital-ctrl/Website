@@ -151,7 +151,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   background: var(--brand); transition: max-height .35s ease;
 }
 .people li:hover .card-info, .people li:focus-within .card-info { background: var(--brand); color: var(--cream); }
-.people li:hover .card-more, .people li:focus-within .card-more { max-height: 140px; }
+.people li:hover .card-more, .people li:focus-within .card-more { max-height: 240px; }
 .people .card-meta { margin: 14px 8px 0; color: var(--cream); }
 .read-more {
   margin: 12px 0 8px; padding: 2px 4px;
