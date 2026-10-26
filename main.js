@@ -4,6 +4,13 @@ toggle.addEventListener('click', () => {
   const open = document.body.classList.toggle('nav-open');
   toggle.setAttribute('aria-expanded', open);
 });
+// Close the mobile menu after picking a link (About scrolls within the home page)
+document.getElementById('nav-links').addEventListener('click', (e) => {
+  if (e.target.closest('a')) {
+    document.body.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', false);
+  }
+});
 
 // "What we do" slides: the section is pinned and scrolling advances the slides
 for (const section of document.querySelectorAll('.slides')) {
