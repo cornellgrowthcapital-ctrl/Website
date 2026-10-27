@@ -25,7 +25,7 @@ if (bio) {
       img.alt = text('h3');
       bio.querySelector('h2').textContent = text('h3');
       bio.querySelector('.bio-role').textContent = text('.card-info > p');
-      bio.querySelector('.bio-meta').textContent = text('.card-meta');
+      bio.querySelector('.bio-meta').textContent = card.querySelector('.card-meta')?.dataset.full || text('.card-meta');
       bio.querySelector('.bio-text').textContent = text('.card-bio') || 'Bio coming soon.';
       bio.showModal();
     } else if (e.target === bio) {

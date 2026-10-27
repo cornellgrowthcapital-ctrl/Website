@@ -98,16 +98,21 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .card-info { position: relative; padding: 12px 8px 10px; background: #fff; transition: background .3s, color .3s; }
 .card-more {
   position: absolute; left: 0; right: 0; bottom: 100%;
-  max-height: 0; overflow: hidden;
-  background: var(--brand); transition: max-height .35s ease;
+  display: flex; flex-direction: column;
+  height: 0; overflow: hidden;
+  background: var(--brand); transition: height .35s ease;
 }
 .people li:hover .card-info, .people li:focus-within .card-info { background: var(--brand); color: var(--cream); }
-.people li:hover .card-more, .people li:focus-within .card-more { max-height: 240px; }
-.people .card-meta { margin: 14px 8px 0; color: var(--cream); }
+/* Same height on every card, low enough to stay below the face */
+.people li:hover .card-more, .people li:focus-within .card-more { height: 64px; padding: 8px 0 6px; }
+.people .card-meta {
+  margin: 0 6px; color: var(--cream); font-size: 12px; line-height: 1.3;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
 .read-more {
-  margin: 12px 0 8px; padding: 2px 4px;
+  margin: auto 0 0; padding: 0 4px;  /* pinned to the bottom of the panel */
   background: none; border: 0; cursor: pointer;
-  color: var(--cream); font: italic 15px var(--serif); letter-spacing: .02em;
+  color: var(--cream); font: italic 14px var(--serif); letter-spacing: .02em;
 }
 .read-more span { display: inline-block; transition: transform .2s; }
 .read-more:hover span { transform: translateX(4px); }
@@ -115,8 +120,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 @media (hover: none) {
   .people li { display: flex; flex-direction: column; }  /* panels in a row line up */
   .card-info { flex: 1; display: flex; flex-direction: column; padding: 12px 8px 10px; background: var(--brand); color: var(--cream); }
-  .card-more { position: static; order: 3; max-height: none; background: none; }
-  .people .card-meta { margin: 6px 0 0; font-size: 13px; opacity: .85; }
+  .card-more { position: static; order: 3; height: auto; padding: 0; margin-top: auto; background: none; }
+  .people .card-meta { margin: 6px 0 0; font-size: 13px; opacity: .85; display: block; -webkit-line-clamp: unset; }
   .read-more { margin: 6px 0 0; font-size: 14px; color: var(--cream); }
 }
 
